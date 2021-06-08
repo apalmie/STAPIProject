@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/STAPIProject/static/css/main.dfad3a32.chunk.css",
+    "main.js": "/STAPIProject/static/js/main.af782950.chunk.js",
+    "main.js.map": "/STAPIProject/static/js/main.af782950.chunk.js.map",
+    "runtime-main.js": "/STAPIProject/static/js/runtime-main.ca168a70.js",
+    "runtime-main.js.map": "/STAPIProject/static/js/runtime-main.ca168a70.js.map",
+    "static/css/2.4f8976c6.chunk.css": "/STAPIProject/static/css/2.4f8976c6.chunk.css",
+    "static/js/2.e4212b9b.chunk.js": "/STAPIProject/static/js/2.e4212b9b.chunk.js",
+    "static/js/2.e4212b9b.chunk.js.map": "/STAPIProject/static/js/2.e4212b9b.chunk.js.map",
+    "static/js/3.ded2f4e6.chunk.js": "/STAPIProject/static/js/3.ded2f4e6.chunk.js",
+    "static/js/3.ded2f4e6.chunk.js.map": "/STAPIProject/static/js/3.ded2f4e6.chunk.js.map",
+    "index.html": "/STAPIProject/index.html",
+    "static/css/2.4f8976c6.chunk.css.map": "/STAPIProject/static/css/2.4f8976c6.chunk.css.map",
+    "static/css/main.dfad3a32.chunk.css.map": "/STAPIProject/static/css/main.dfad3a32.chunk.css.map",
+    "static/js/2.e4212b9b.chunk.js.LICENSE.txt": "/STAPIProject/static/js/2.e4212b9b.chunk.js.LICENSE.txt",
+    "static/media/chevron-double-left.svg": "/STAPIProject/static/media/chevron-double-left.2433652e.svg",
+    "static/media/chevron-double-right.svg": "/STAPIProject/static/media/chevron-double-right.1f81620e.svg",
+    "static/media/chevron-down.svg": "/STAPIProject/static/media/chevron-down.8624f04f.svg",
+    "static/media/chevron-right.svg": "/STAPIProject/static/media/chevron-right.61c607bb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca168a70.js",
+    "static/css/2.4f8976c6.chunk.css",
+    "static/js/2.e4212b9b.chunk.js",
+    "static/css/main.dfad3a32.chunk.css",
+    "static/js/main.af782950.chunk.js"
+  ]
+}
