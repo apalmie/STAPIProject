@@ -9,6 +9,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import { Accordion, Card } from 'react-bootstrap';
 import EpisodeCharacters from './EpisodeCharacters';
+import https from 'https';
 
 export default function EpisodeData() {
 
@@ -17,9 +18,12 @@ export default function EpisodeData() {
     const [isExpanded, setExpanded] = useState(false);
     const {charId, uid } = useParams();
 
+    const agent = new https.Agent({
+        rejectUnauthorized: false
+    });
 
     useEffect(() => {
-        console.log(`${baseURL}/episode?uid=${uid}`);
+        console.log(`${baseURL}/episode?uid=${uid}`, { agent });
         fetch(`${baseURL}/episode?uid=${uid}`)
             .then(resp => resp.json())
             .then(e => {

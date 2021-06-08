@@ -7,8 +7,8 @@ import {
     Form,
     Button
 } from 'react-bootstrap';
-
 import SeriesDetails from './SeriesDetails';
+import https from 'https';
 
 export default function STseries(props) {
 
@@ -17,6 +17,9 @@ export default function STseries(props) {
     const [selectedSeries, selectSeriesOption] = useState({});
 
     const baseURL = 'http://stapi.co/api/v1/rest';
+    const agent = new https.Agent({
+        rejectUnauthorized: false
+    });
 
     const handleSelect = (e) => {
         if (selectedSeries.uid !== seriesOptions[e].uid) {
@@ -45,7 +48,7 @@ export default function STseries(props) {
 
     useEffect(() => {
 
-        fetch(`${baseURL}/series/search`)
+        fetch(`${baseURL}/series/search`, { agent })
             .then(resp => {
                 let jsonResp = resp.json();
                 return jsonResp;

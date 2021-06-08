@@ -11,15 +11,20 @@ import CharacterOrg from './CharacterOrg';
 import CharacterEpisodes from './CharacterEpisodes';
 import CharacterProfile from './CharacterProfile';
 import CharacterPerformer from './CharacterPerformer';
+import https from "https";
 
 export default function CharacterBio() {
+
+    const agent = new https.Agent({
+        rejectUnauthorized: false
+      });
 
     const baseURL = 'http://stapi.co/api/v1/rest';
     const [characterBio, setCharacterBio] = useState({});
     const { uid } = useParams();
 
     useEffect(() => {
-        fetch(`${baseURL}/character?uid=${uid}`)
+        fetch(`${baseURL}/character?uid=${uid}`, { agent })
             .then(resp => resp.json())
             .then(characterData => {
                 setCharacterBio(characterData.character)

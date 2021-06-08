@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Col } from 'react-bootstrap';
+import https from 'https';
 
 class Episodes extends Component {
     state = {
@@ -12,7 +13,12 @@ class Episodes extends Component {
     }
 
     performSearch = () => {
-        fetch(`${this.state.baseURL}/season/search`)
+        
+        const agent = new https.Agent({
+            rejectUnauthorized: false
+        });
+
+        fetch(`${this.state.baseURL}/season/search`, { agent })
             .then(resp => resp.json())
             .then(seasonData => {
                 const seasons = seasonData.seasons;

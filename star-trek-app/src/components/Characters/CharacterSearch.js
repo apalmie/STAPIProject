@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CharacterData from './CharacterData';
+import https from 'https';
 
 
 export default class characterSearch extends Component {
@@ -11,12 +12,16 @@ export default class characterSearch extends Component {
     }
 
     performSearch = () => {
+        
+        const agent = new https.Agent({
+            rejectUnauthorized: false
+        });
 
         const baseURL = 'http://stapi.co/api/v1/rest';
         const uid = this.props.episode.seasonUID;
         const episodeNum = this.props.episode.episodeNum;
 
-        fetch(`${baseURL}/season?uid=${uid}`)
+        fetch(`${baseURL}/season?uid=${uid}`, { agent })
         .then(resp => {
             const respJson = resp.json();
             return respJson;
